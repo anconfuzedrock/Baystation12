@@ -65,3 +65,75 @@
 
 /obj/item/clothing/suit/space/void/skrell/black
 	icon_state = "skrell_suit_black"
+
+/obj/item/clothing/head/helmet/space/void/dohruk/
+	name = "Unathi Helmet"
+	desc = "Your standards have seen better days if you plan on wearing this."
+	species_restricted = list(SPECIES_UNATHI)
+	armor = list(
+		melee = ARMOR_MELEE_RESISTANT,
+		bullet = ARMOR_BALLISTIC_MINOR,
+		laser = ARMOR_LASER_SMALL,
+		energy = ARMOR_ENERGY_SMALL,
+		bomb = ARMOR_BOMB_PADDED,
+		bio = ARMOR_BIO_SHIELDED,
+		rad = ARMOR_RAD_RESISTANT
+		)
+
+
+
+/obj/item/clothing/head/helmet/space/void/dohruk/heavy
+	name = "Heavy Unathi Helmet"
+	desc = "Not heavy in a good way."
+	armor = list(
+		melee = ARMOR_MELEE_MAJOR,
+		bullet = ARMOR_BALLISTIC_SMALL,
+		laser = ARMOR_LASER_SMALL,
+		energy = ARMOR_ENERGY_SMALL,
+		bomb = ARMOR_BOMB_RESISTANT,
+		bio = ARMOR_BIO_SHIELDED,
+		rad = ARMOR_RAD_RESISTANT
+		)
+	siemens_coefficient = 0.3
+
+/obj/item/clothing/suit/space/void/dohruk/
+	name = "Unathi Voidsuit"
+	desc = "Half suit, half garbage, completely worthless."
+	species_restricted = list(SPECIES_UNATHI)
+	armor = list(
+		melee = ARMOR_MELEE_RESISTANT,
+		bullet = ARMOR_BALLISTIC_MINOR,
+		laser = ARMOR_LASER_SMALL,
+		energy = ARMOR_ENERGY_SMALL,
+		bomb = ARMOR_BOMB_PADDED,
+		bio = ARMOR_BIO_SHIELDED,
+		rad = ARMOR_RAD_RESISTANT
+		)
+
+/obj/item/clothing/suit/space/void/dohruk/heavy
+	name = "Heavy Unathi Voidsuit"
+	desc = "Not heavy in a good way."
+	armor = list(
+		melee = ARMOR_MELEE_MAJOR,
+		bullet = ARMOR_BALLISTIC_SMALL,
+		laser = ARMOR_LASER_SMALL,
+		energy = ARMOR_ENERGY_SMALL,
+		bomb = ARMOR_BOMB_RESISTANT,
+		bio = ARMOR_BIO_SHIELDED,
+		rad = ARMOR_RAD_RESISTANT
+		)
+	siemens_coefficient = 0.3
+
+/obj/item/clothing/suit/space/void/dohruk/prepared
+	helmet = /obj/item/clothing/head/helmet/space/void/dohruk
+	boots = /obj/item/clothing/shoes/magboots
+	tank = /obj/item/weapon/tank/oxygen
+
+/obj/item/clothing/suit/space/void/dohruk/heavy/prepared
+	helmet = /obj/item/clothing/head/helmet/space/void/dohruk/heavy
+	boots = /obj/item/clothing/shoes/magboots
+	tank = /obj/item/weapon/tank/oxygen
+
+/obj/item/clothing/suit/space/void/dohruk/heavy/New()
+	..()
+	slowdown_per_slot[slot_wear_suit] = 2

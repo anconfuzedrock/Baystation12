@@ -2,16 +2,12 @@
 "aa" = (
 /turf/space,
 /area/space)
-"ab" = (
-/obj/effect/shuttle_landmark/rawl2,
-/turf/space,
-/area/space)
 "ac" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/universal{
 	dir = 4
 	},
 /turf/simulated/wall/titanium,
-/area/rawl/crew)
+/area/rawl/fore)
 "ad" = (
 /obj/effect/overmap/visitable/ship/landable/rawl_ship,
 /turf/space,
@@ -21,20 +17,22 @@
 	dir = 4
 	},
 /obj/effect/wallframe_spawn/reinforced/titanium,
+/obj/machinery/door/firedoor/autoset,
 /turf/simulated/floor/plating,
 /area/rawl/crew)
 "af" = (
+/obj/effect/paint/red,
 /turf/simulated/wall/titanium,
 /area/rawl/crew)
 "ag" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/universal{
 	dir = 4
 	},
-/obj/machinery/door/firedoor,
 /obj/effect/wallframe_spawn/reinforced/polarized/full{
 	frame_path = /obj/structure/wall_frame/titanium;
 	id = "rawl_windows"
 	},
+/obj/machinery/door/firedoor/autoset,
 /turf/simulated/floor/plating,
 /area/rawl/crew)
 "ah" = (
@@ -45,6 +43,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1
 	},
+/obj/effect/floor_decal/corner/white/diagonal,
 /turf/simulated/floor/tiled,
 /area/rawl/crew)
 "ai" = (
@@ -52,32 +51,27 @@
 /turf/space,
 /area/space)
 "aj" = (
-/obj/machinery/door/firedoor,
-/obj/structure/curtain/black,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/door/airlock,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/door/firedoor/autoset,
 /turf/simulated/floor/plating,
-/area/rawl/crew)
+/area/rawl/cargo)
 "ak" = (
-/obj/structure/closet/secure_closet/freezer/meat,
+/obj/structure/closet/secure_closet/freezer/meat{
+	req_access = list("ACCESS_RAWL")
+	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/rawl/crew)
-"al" = (
-/obj/effect/shuttle_landmark/rawl1,
-/turf/space,
-/area/space)
 "am" = (
-/obj/machinery/power/apc{
-	cell_type = /obj/item/weapon/cell/hyper;
-	dir = 1;
-	name = "Rawl APC";
-	pixel_x = 0;
-	pixel_y = 24;
-	req_access = null
-	},
 /obj/structure/cable{
 	d2 = 8;
 	icon_state = "0-8"
@@ -87,23 +81,41 @@
 	icon_state = "map_connector"
 	},
 /obj/machinery/portable_atmospherics/powered/scrubber,
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/machinery/power/apc/high/rawl{
+	dir = 1;
+	pixel_y = 24
+	},
 /turf/simulated/floor/plating,
-/area/rawl/crew)
+/area/rawl/pipeworks)
 "an" = (
 /obj/machinery/atmospherics/unary/engine{
 	dir = 8;
 	icon_state = "nozzle"
 	},
 /turf/simulated/floor/airless,
-/area/rawl/crew)
+/area/rawl/pipeworks)
 "ao" = (
 /obj/machinery/disposal,
 /obj/structure/disposalpipe/trunk{
 	dir = 8
 	},
+/obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled,
 /area/rawl/crew)
 "ap" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled,
 /area/rawl/crew)
 "aq" = (
@@ -113,6 +125,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+/obj/effect/floor_decal/corner/white/diagonal,
 /turf/simulated/floor/tiled,
 /area/rawl/crew)
 "ar" = (
@@ -133,34 +146,38 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/rawl/crew)
+/area/rawl/pipeworks)
 "at" = (
 /obj/machinery/access_button/airlock_interior{
 	frequency = 1439;
 	master_tag = "rawl_airlock";
 	pixel_x = 0
 	},
+/obj/effect/paint/brown,
 /turf/simulated/wall/titanium,
-/area/rawl/crew)
+/area/rawl/pipeworks)
 "au" = (
 /obj/machinery/atmospherics/pipe/simple/visible/fuel{
 	dir = 4
 	},
-/obj/structure/closet/emcloset,
+/obj/machinery/portable_atmospherics/canister/empty/hydrogen,
 /turf/simulated/floor/plating,
-/area/rawl/crew)
+/area/rawl/pipeworks)
 "av" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/fuel{
 	dir = 1
 	},
+/obj/machinery/alarm/rawl{
+	pixel_y = 24
+	},
 /turf/simulated/floor/plating,
-/area/rawl/crew)
+/area/rawl/pipeworks)
 "aw" = (
 /obj/machinery/atmospherics/pipe/simple/visible/fuel{
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/rawl/crew)
+/area/rawl/pipeworks)
 "ax" = (
 /obj/machinery/atmospherics/pipe/manifold4w/visible/scrubbers,
 /obj/structure/cable{
@@ -173,21 +190,26 @@
 	sheets = 25
 	},
 /turf/simulated/floor/plating,
-/area/rawl/crew)
+/area/rawl/pipeworks)
 "ay" = (
 /obj/machinery/access_button/airlock_exterior{
 	frequency = 1439;
 	master_tag = "rawl_airlock";
 	pixel_x = 0
 	},
+/obj/effect/paint/red,
 /turf/simulated/wall/titanium,
-/area/rawl/crew)
+/area/rawl/pipeworks)
 "az" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/fuel{
 	dir = 4
 	},
+/obj/machinery/light/small{
+	dir = 4;
+	icon_state = "bulb1"
+	},
 /turf/simulated/floor/plating,
-/area/rawl/crew)
+/area/rawl/pipeworks)
 "aA" = (
 /obj/machinery/power/smes/buildable/preset/rawl/smes{
 	charge = 550000
@@ -197,14 +219,14 @@
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/plating,
-/area/rawl/crew)
+/area/rawl/pipeworks)
 "aB" = (
 /obj/machinery/atmospherics/unary/tank/carbon_dioxide{
 	dir = 4;
-	start_pressure = 4559.63
+	start_pressure = 10000
 	},
 /turf/simulated/floor/plating,
-/area/rawl/crew)
+/area/rawl/pipeworks)
 "aC" = (
 /obj/structure/table/standard,
 /obj/item/weapon/material/knife/kitchen/cleaver,
@@ -228,17 +250,17 @@
 	icon_state = "map_scrubber_on"
 	},
 /turf/simulated/floor/plating,
-/area/rawl/crew)
+/area/rawl/pipeworks)
 "aG" = (
 /obj/machinery/portable_atmospherics/canister/carbon_dioxide/engine_setup{
-	start_pressure = 7498
+	start_pressure = 8896
 	},
 /obj/machinery/atmospherics/portables_connector{
 	dir = 4;
 	icon_state = "map_connector"
 	},
 /turf/simulated/floor/plating,
-/area/rawl/crew)
+/area/rawl/pipeworks)
 "aH" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 8;
@@ -248,6 +270,7 @@
 	frequency = 1439;
 	id_tag = "rawl_airlock";
 	pixel_y = 24;
+	req_access = list("ACCESS_RAWL");
 	tag_airpump = "rawl_pump";
 	tag_chamber_sensor = "rawl_sensor";
 	tag_exterior_door = "rawl_outer";
@@ -262,43 +285,48 @@
 	dir = 1;
 	icon_state = "handrail"
 	},
+/obj/effect/floor_decal/industrial/warning/full,
 /turf/simulated/floor/plating,
-/area/rawl/crew)
+/area/rawl/pipeworks)
 "aI" = (
 /obj/machinery/door/airlock/external/bolted{
 	frequency = 1439;
 	id_tag = "rawl_outer"
 	},
 /turf/simulated/floor/plating,
-/area/rawl/crew)
+/area/rawl/pipeworks)
 "aJ" = (
 /obj/machinery/atmospherics/pipe/simple/visible/fuel,
-/obj/structure/fuel_port{
-	pixel_x = 32
-	},
-/turf/simulated/floor/plating,
-/area/rawl/crew)
+/obj/effect/paint/brown,
+/turf/simulated/wall/titanium,
+/area/rawl/pipeworks)
 "aK" = (
 /obj/machinery/sleeper,
-/turf/simulated/floor/tiled,
+/obj/machinery/alarm/rawl{
+	pixel_y = 24
+	},
+/turf/simulated/floor/tiled/white,
 /area/rawl/crew)
 "aL" = (
-/obj/machinery/recharger/wallcharger{
-	dir = 8;
-	icon_state = "wrecharger0";
-	pixel_x = 23;
-	pixel_y = -3
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/closet/secure_closet/personal/rawl{
+	pixel_x = 32
+	},
 /turf/simulated/floor/tiled,
-/area/rawl/crew)
+/area/rawl/fore)
 "aM" = (
 /obj/structure/table/standard,
 /obj/structure/closet/secure_closet/medical_wall{
 	name = "Medical Equipment Cabinet";
 	pixel_x = 0;
 	pixel_y = 32;
-	req_access = null
+	req_access = list("ACCESS_RAWL")
 	},
 /obj/item/weapon/reagent_containers/ivbag/nanoblood,
 /obj/item/weapon/reagent_containers/ivbag,
@@ -313,7 +341,7 @@
 /obj/item/weapon/tape_roll,
 /obj/item/weapon/reagent_containers/food/snacks/salo,
 /obj/item/weapon/reagent_containers/food/drinks/glass2/fitnessflask/proteinshake,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/white,
 /area/rawl/crew)
 "aN" = (
 /obj/machinery/power/terminal{
@@ -328,17 +356,20 @@
 	dir = 6
 	},
 /turf/simulated/floor/plating,
-/area/rawl/crew)
+/area/rawl/pipeworks)
 "aO" = (
 /obj/machinery/atmospherics/pipe/manifold/visible{
 	dir = 1
 	},
 /turf/simulated/floor/plating,
-/area/rawl/crew)
+/area/rawl/pipeworks)
 "aP" = (
 /obj/machinery/door/unpowered/simple/plastic/open,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
+	},
+/obj/effect/floor_decal/corner/white/border{
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/rawl/crew)
@@ -349,7 +380,7 @@
 	name = "Air to Main Airlock"
 	},
 /turf/simulated/floor/plating,
-/area/rawl/crew)
+/area/rawl/pipeworks)
 "aR" = (
 /obj/structure/cable{
 	d1 = 4;
@@ -360,11 +391,22 @@
 	dir = 10
 	},
 /obj/machinery/portable_atmospherics/powered/pump,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/plating,
-/area/rawl/crew)
+/area/rawl/pipeworks)
 "aS" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 5
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled,
 /area/rawl/crew)
@@ -372,8 +414,11 @@
 /obj/machinery/atmospherics/pipe/manifold/visible{
 	dir = 4
 	},
+/obj/structure/fuel_port{
+	pixel_x = 32
+	},
 /turf/simulated/floor/plating,
-/area/rawl/crew)
+/area/rawl/pipeworks)
 "aU" = (
 /obj/structure/table/standard,
 /obj/machinery/microwave,
@@ -383,38 +428,47 @@
 /turf/simulated/floor/tiled,
 /area/rawl/crew)
 "aV" = (
-/obj/item/device/radio,
-/obj/item/device/radio,
-/obj/item/device/radio,
-/obj/item/weapon/crowbar/prybar,
-/obj/item/weapon/crowbar/prybar,
-/obj/item/weapon/crowbar/prybar,
+/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/weapon/storage/briefcase/inflatable,
+/obj/structure/table/rack,
+/obj/item/weapon/tank/jetpack/carbondioxide,
+/obj/item/weapon/tank/jetpack/carbondioxide,
+/obj/item/weapon/tank/jetpack/carbondioxide,
+/obj/item/weapon/tank/emergency/oxygen/double,
+/obj/item/weapon/tank/emergency/oxygen/double,
+/obj/item/weapon/tank/emergency/oxygen/double,
 /obj/item/clothing/mask/gas,
 /obj/item/clothing/mask/gas,
 /obj/item/clothing/mask/gas,
-/obj/structure/closet/cabinet,
-/obj/item/clothing/under/savage_hunter,
-/obj/item/clothing/under/savage_hunter,
-/obj/item/clothing/under/savage_hunter,
-/obj/item/clothing/shoes/jackboots/unathi,
-/obj/item/clothing/shoes/jackboots/unathi,
-/obj/item/clothing/shoes/jackboots/unathi,
 /turf/simulated/floor/tiled,
-/area/rawl/crew)
+/area/rawl/cargo)
 "aW" = (
 /obj/structure/hygiene/sink{
 	dir = 1;
 	pixel_y = 16
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled,
 /area/rawl/crew)
 "aX" = (
 /obj/structure/iv_drip,
-/turf/simulated/floor/tiled,
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/tiled/white,
 /area/rawl/crew)
 "aY" = (
 /obj/machinery/optable,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/white,
 /area/rawl/crew)
 "aZ" = (
 /obj/structure/table/standard,
@@ -422,21 +476,20 @@
 /area/rawl/crew)
 "ba" = (
 /obj/machinery/door/airlock,
-/obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/simple/visible/supply{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/scrubbers{
 	dir = 4
 	},
-/turf/simulated/floor/plating,
-/area/rawl/crew)
-"bb" = (
-/obj/machinery/atmospherics/pipe/simple/visible/scrubbers{
-	dir = 10
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
-/turf/simulated/wall/titanium,
-/area/rawl/crew)
+/obj/machinery/door/firedoor/autoset,
+/turf/simulated/floor/plating,
+/area/rawl/fore)
 "bc" = (
 /obj/machinery/door/airlock/external/bolted{
 	frequency = 1439;
@@ -451,22 +504,28 @@
 	icon_state = "intact"
 	},
 /turf/simulated/floor/plating,
-/area/rawl/crew)
+/area/rawl/pipeworks)
 "bd" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4;
 	icon_state = "pipe-c"
 	},
+/obj/effect/paint/red,
 /turf/simulated/wall/titanium,
 /area/rawl/crew)
 "be" = (
-/obj/effect/shuttle_landmark/rawlspawn,
+/obj/effect/shuttle_landmark/rawl/start,
 /obj/machinery/atmospherics/pipe/manifold/visible/supply,
 /obj/machinery/atmospherics/pipe/simple/visible/scrubbers{
 	dir = 4
 	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/plating,
-/area/rawl/crew)
+/area/rawl/pipeworks)
 "bf" = (
 /obj/machinery/atmospherics/pipe/simple/visible/fuel,
 /obj/machinery/atmospherics/pipe/simple/visible{
@@ -474,20 +533,15 @@
 	icon_state = "intact"
 	},
 /turf/simulated/floor/plating,
-/area/rawl/crew)
+/area/rawl/pipeworks)
 "bg" = (
 /obj/machinery/atmospherics/pipe/simple/visible/fuel{
 	dir = 5
 	},
-/turf/simulated/floor/plating,
-/area/rawl/crew)
+/obj/effect/paint/brown,
+/turf/simulated/wall/titanium,
+/area/rawl/pipeworks)
 "bh" = (
-/obj/machinery/alarm{
-	dir = 1;
-	pixel_y = -28;
-	req_access = null;
-	target_temperature = 326.15
-	},
 /obj/machinery/atmospherics/portables_connector{
 	dir = 1
 	},
@@ -495,7 +549,7 @@
 	start_pressure = 607.95
 	},
 /turf/simulated/floor/plating,
-/area/rawl/crew)
+/area/rawl/pipeworks)
 "bi" = (
 /obj/machinery/atmospherics/unary/tank/air{
 	dir = 1;
@@ -503,11 +557,11 @@
 	temperature = 313.15
 	},
 /turf/simulated/floor/plating,
-/area/rawl/crew)
+/area/rawl/pipeworks)
 "bj" = (
 /obj/machinery/atmospherics/pipe/manifold4w/visible,
 /turf/simulated/floor/plating,
-/area/rawl/crew)
+/area/rawl/pipeworks)
 "bk" = (
 /obj/structure/disposalpipe/trunk{
 	dir = 4
@@ -527,19 +581,31 @@
 /obj/machinery/atmospherics/pipe/simple/visible/scrubbers{
 	dir = 4
 	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
 /turf/simulated/floor/plating,
-/area/rawl/crew)
+/area/rawl/pipeworks)
 "bm" = (
-/obj/item/weapon/tape_roll,
-/obj/item/device/binoculars,
-/obj/item/device/binoculars,
 /obj/structure/table/rack,
-/obj/item/device/binoculars,
-/obj/item/device/gps,
-/obj/item/device/gps,
-/obj/item/device/gps,
+/obj/item/weapon/gun/projectile/heavysniper/boltaction,
+/obj/item/ammo_magazine/speedloader/clip,
+/obj/item/ammo_magazine/speedloader/clip,
+/obj/item/ammo_magazine/speedloader/clip,
+/obj/item/ammo_magazine/speedloader/clip,
+/obj/item/ammo_magazine/speedloader/clip,
+/obj/item/weapon/gun/launcher/crossbow,
+/obj/item/stack/material/rods/fifty,
+/obj/item/weapon/gun/launcher/crossbow,
 /turf/simulated/floor/tiled,
-/area/rawl/crew)
+/area/rawl/cargo)
 "bn" = (
 /obj/structure/hygiene/toilet{
 	dir = 1
@@ -548,10 +614,7 @@
 	dir = 8;
 	icon_state = "handrail"
 	},
-/turf/simulated/floor/tiled,
-/area/rawl/crew)
-"bo" = (
-/obj/structure/closet/crate/freezer,
+/obj/effect/floor_decal/corner/white/diagonal,
 /turf/simulated/floor/tiled,
 /area/rawl/crew)
 "bp" = (
@@ -566,20 +629,15 @@
 	use_power = 1
 	},
 /turf/simulated/floor/airless,
-/area/rawl/crew)
+/area/rawl/fore)
 "bq" = (
 /obj/machinery/atmospherics/pipe/manifold/visible{
 	dir = 8;
 	icon_state = "map"
 	},
-/obj/machinery/access_button/airlock_interior{
-	frequency = 1331;
-	master_tag = "rawl_main";
-	pixel_x = 0;
-	pixel_y = 0
-	},
+/obj/effect/paint/brown,
 /turf/simulated/wall/titanium,
-/area/rawl/crew)
+/area/rawl/fore)
 "br" = (
 /obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 6;
@@ -592,15 +650,15 @@
 	name = "Rawl Interior"
 	},
 /turf/simulated/floor/plating,
-/area/rawl/crew)
+/area/rawl/fore)
 "bs" = (
-/obj/machinery/door/firedoor,
 /obj/effect/wallframe_spawn/reinforced/polarized/full{
 	frame_path = /obj/structure/wall_frame/titanium;
 	id = "rawl_windows"
 	},
+/obj/machinery/door/firedoor/autoset,
 /turf/simulated/floor/plating,
-/area/rawl/crew)
+/area/rawl/fore)
 "bt" = (
 /obj/machinery/atmospherics/pipe/manifold/visible{
 	dir = 1
@@ -612,9 +670,12 @@
 	name = "Rawl Interior"
 	},
 /turf/simulated/floor/plating,
-/area/rawl/crew)
+/area/rawl/fore)
 "bu" = (
-/obj/machinery/atmospherics/pipe/manifold/visible/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/visible/scrubbers{
+	dir = 9
+	},
+/obj/effect/paint/red,
 /turf/simulated/wall/titanium,
 /area/rawl/crew)
 "bv" = (
@@ -623,7 +684,7 @@
 	id_tag = "rawl_main_pump"
 	},
 /turf/simulated/floor/plating,
-/area/rawl/crew)
+/area/rawl/fore)
 "bw" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/shuttle{
 	dir = 1;
@@ -634,40 +695,43 @@
 	icon_state = "handrail"
 	},
 /turf/simulated/floor/plating,
-/area/rawl/crew)
+/area/rawl/fore)
 "bx" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/shuttle{
 	id_tag = "rawl_main_pump_out_internal"
 	},
 /turf/simulated/floor/plating,
-/area/rawl/crew)
+/area/rawl/fore)
 "by" = (
 /obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 9;
 	icon_state = "intact"
 	},
+/obj/effect/paint/brown,
 /turf/simulated/wall/titanium,
-/area/rawl/crew)
+/area/rawl/fore)
 "bz" = (
 /obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 10;
 	icon_state = "intact"
 	},
+/obj/effect/paint/red,
 /turf/simulated/wall/titanium,
-/area/rawl/crew)
+/area/rawl/fore)
 "bA" = (
-/obj/machinery/shipsensors/weak,
 /obj/machinery/atmospherics/pipe/simple/hidden/universal{
 	dir = 4
 	},
+/obj/machinery/shipsensors,
 /turf/simulated/floor/airless,
-/area/rawl/crew)
+/area/rawl/fore)
 "bB" = (
 /obj/machinery/atmospherics/pipe/manifold/visible{
 	dir = 4
 	},
+/obj/effect/paint/red,
 /turf/simulated/wall/titanium,
-/area/rawl/crew)
+/area/rawl/fore)
 "bC" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/shuttle{
 	dir = 1;
@@ -678,7 +742,7 @@
 	icon_state = "handrail"
 	},
 /turf/simulated/floor/plating,
-/area/rawl/crew)
+/area/rawl/fore)
 "bD" = (
 /obj/machinery/airlock_sensor{
 	frequency = 1331;
@@ -690,8 +754,9 @@
 	dir = 5;
 	icon_state = "intact"
 	},
+/obj/effect/paint/red,
 /turf/simulated/wall/titanium,
-/area/rawl/crew)
+/area/rawl/fore)
 "bE" = (
 /obj/machinery/atmospherics/pipe/manifold/visible,
 /obj/machinery/door/airlock/external{
@@ -699,17 +764,19 @@
 	density = 1;
 	frequency = 1331;
 	id_tag = "rawl_main_outer";
+	locked = 1;
 	name = "Rawl External Access"
 	},
 /turf/simulated/floor/plating,
-/area/rawl/crew)
+/area/rawl/fore)
 "bF" = (
 /obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 6;
 	icon_state = "intact"
 	},
+/obj/effect/paint/brown,
 /turf/simulated/wall/titanium,
-/area/rawl/crew)
+/area/rawl/fore)
 "bG" = (
 /obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 9;
@@ -720,10 +787,11 @@
 	density = 1;
 	frequency = 1331;
 	id_tag = "rawl_main_outer";
+	locked = 1;
 	name = "Rawl External Access"
 	},
 /turf/simulated/floor/plating,
-/area/rawl/crew)
+/area/rawl/fore)
 "bH" = (
 /obj/machinery/atmospherics/portables_connector{
 	dir = 8
@@ -732,32 +800,27 @@
 	start_pressure = 1900
 	},
 /turf/simulated/floor/plating,
-/area/rawl/crew)
+/area/rawl/pipeworks)
 "bI" = (
 /obj/machinery/door/airlock/external{
 	autoset_access = 0;
 	density = 1;
 	frequency = 1331;
 	id_tag = "rawl_main_outer";
+	locked = 1;
 	name = "Rawl External Access"
 	},
 /obj/machinery/atmospherics/pipe/manifold/visible,
 /turf/simulated/floor/plating,
-/area/rawl/crew)
-"bJ" = (
-/obj/machinery/access_button/airlock_exterior{
-	frequency = 1331;
-	master_tag = "rawl_main";
-	pixel_x = 0;
-	pixel_y = 0
-	},
-/turf/simulated/wall/titanium,
-/area/rawl/crew)
+/area/rawl/fore)
 "bK" = (
-/obj/item/weapon/storage/mirror,
+/obj/item/weapon/storage/mirror{
+	randpixel = 0
+	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/effect/paint/red,
 /turf/simulated/wall/titanium,
 /area/rawl/crew)
 "bL" = (
@@ -771,62 +834,67 @@
 /obj/machinery/atmospherics/pipe/simple/visible/scrubbers{
 	dir = 4
 	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/plating,
-/area/rawl/crew)
-"bM" = (
-/obj/machinery/computer/cryopod,
-/turf/simulated/wall/titanium,
-/area/rawl/crew)
+/area/rawl/pipeworks)
 "bN" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
 /turf/simulated/floor/tiled,
-/area/rawl/crew)
+/area/rawl/cargo)
 "bO" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/effect/paint/red,
 /turf/simulated/wall/titanium,
 /area/rawl/crew)
 "bP" = (
 /obj/machinery/light,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
 /obj/structure/kitchenspike,
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /turf/simulated/floor/tiled,
 /area/rawl/crew)
 "bQ" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 5
-	},
 /obj/structure/table/rack,
-/obj/item/clothing/suit/space/void/command/prepared,
+/obj/item/clothing/suit/space/void/dohruk/heavy/prepared,
+/obj/item/weapon/storage/secure/safe/rawl{
+	pixel_x = 4;
+	pixel_y = 32
+	},
 /turf/simulated/floor/tiled,
-/area/rawl/crew)
+/area/rawl/fore)
 "bR" = (
-/obj/item/ammo_magazine/shotholder/net,
-/obj/item/ammo_magazine/shotholder/net,
-/obj/item/weapon/gun/projectile/shotgun/doublebarrel{
-	starts_loaded = 0
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1;
+	icon_state = "map-scrubbers"
 	},
-/obj/item/weapon/gun/projectile/shotgun/doublebarrel{
-	starts_loaded = 0
-	},
-/obj/item/ammo_magazine/shotholder/net,
-/obj/item/ammo_magazine/shotholder/net,
-/obj/structure/table/rack{
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/obj/item/weapon/material/harpoon,
-/obj/item/weapon/material/harpoon,
-/obj/item/weapon/material/harpoon,
-/obj/item/device/dociler,
-/obj/item/device/dociler,
-/obj/item/device/dociler,
-/obj/item/device/dociler,
+/obj/machinery/alarm/rawl{
+	pixel_y = 24
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
 /turf/simulated/floor/tiled,
-/area/rawl/crew)
+/area/rawl/cargo)
 "bS" = (
 /obj/machinery/atmospherics/pipe/simple/visible/universal,
 /obj/structure/cable{
@@ -836,38 +904,47 @@
 	},
 /obj/machinery/portable_atmospherics/canister/oxygen,
 /turf/simulated/floor/plating,
-/area/rawl/crew)
+/area/rawl/pipeworks)
 "bT" = (
 /obj/item/weapon/stool/padded,
+/obj/structure/handrail,
 /turf/simulated/floor/tiled,
 /area/rawl/crew)
 "bU" = (
 /obj/machinery/atmospherics/pipe/simple/visible/scrubbers,
+/obj/effect/paint/brown,
 /turf/simulated/wall/titanium,
 /area/rawl/crew)
 "bV" = (
-/obj/machinery/light/small,
 /obj/structure/closet/crate/freezer,
+/obj/effect/floor_decal/corner/white/border{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/rawl/crew)
 "bW" = (
 /obj/effect/wallframe_spawn/reinforced/titanium,
+/obj/machinery/door/firedoor/autoset,
 /turf/simulated/floor/plating,
 /area/rawl/crew)
 "bX" = (
 /obj/structure/table/standard,
 /obj/item/weapon/storage/firstaid/adv,
 /obj/item/weapon/reagent_containers/spray/sterilizine,
-/obj/item/weapon/reagent_containers/spray/cleaner,
 /obj/item/device/scanner/health,
-/turf/simulated/floor/tiled,
+/obj/item/device/flashlight/pen,
+/turf/simulated/floor/tiled/white,
 /area/rawl/crew)
 "bY" = (
-/obj/machinery/atmospherics/pipe/simple/visible/scrubbers{
-	dir = 4
-	},
 /obj/structure/curtain/black,
-/obj/machinery/door/firedoor,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/door/firedoor/autoset,
 /turf/simulated/floor/tiled,
 /area/rawl/crew)
 "bZ" = (
@@ -875,52 +952,60 @@
 	dir = 2;
 	icon_state = "computer"
 	},
+/obj/machinery/alarm/rawl{
+	pixel_y = 24
+	},
 /turf/simulated/floor/tiled,
-/area/rawl/crew)
+/area/rawl/fore)
 "ca" = (
-/obj/structure/table/rack,
-/obj/item/weapon/gun/projectile/heavysniper/boltaction,
-/obj/item/ammo_magazine/speedloader/clip,
-/obj/item/ammo_magazine/speedloader/clip,
-/obj/item/ammo_magazine/speedloader/clip,
-/obj/item/ammo_magazine/speedloader/clip,
-/obj/item/ammo_magazine/speedloader/clip,
-/obj/item/weapon/gun/launcher/crossbow,
-/obj/item/stack/material/rods/fifty,
-/obj/item/weapon/gun/launcher/crossbow,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
-/area/rawl/crew)
+/area/rawl/cargo)
 "cb" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled,
 /area/rawl/crew)
 "cc" = (
 /obj/machinery/computer/ship/helm{
 	dir = 4;
-	req_access = null
+	req_access = newlist()
 	},
 /turf/simulated/floor/tiled,
-/area/rawl/crew)
+/area/rawl/fore)
 "cd" = (
 /obj/structure/bed/chair/shuttle/black{
 	dir = 8;
 	icon_state = "shuttle_chair_preview"
 	},
 /turf/simulated/floor/tiled,
-/area/rawl/crew)
+/area/rawl/fore)
 "ce" = (
-/obj/machinery/atmospherics/pipe/simple/visible/fuel{
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 4
 	},
-/obj/machinery/portable_atmospherics/canister/empty/hydrogen,
-/turf/simulated/floor/plating,
-/area/rawl/crew)
+/obj/machinery/atmospherics/unary/vent_pump/on,
+/turf/simulated/floor/tiled,
+/area/rawl/cargo)
 "cf" = (
 /obj/machinery/vending/wallmed2{
 	dir = 1
 	},
+/obj/effect/paint/brown,
 /turf/simulated/wall/titanium,
 /area/rawl/crew)
 "cg" = (
@@ -935,31 +1020,41 @@
 /obj/machinery/atmospherics/pipe/simple/visible/scrubbers{
 	dir = 10
 	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
 /turf/simulated/floor/plating,
-/area/rawl/crew)
+/area/rawl/pipeworks)
 "ch" = (
 /obj/machinery/computer/ship/sensors{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/rawl/crew)
+/area/rawl/fore)
 "ci" = (
 /obj/machinery/hologram/holopad/longrange/remoteship,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
-/area/rawl/crew)
+/area/rawl/fore)
 "cj" = (
 /obj/machinery/computer/shuttle_control/explore/rawl{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/rawl/crew)
+/area/rawl/fore)
 "ck" = (
-/obj/structure/window/reinforced{
-	dir = 8
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
 	},
-/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
-/area/rawl/crew)
+/area/rawl/cargo)
 "cl" = (
 /obj/structure/table/standard,
 /obj/machinery/button/windowtint{
@@ -968,13 +1063,19 @@
 	pixel_y = 6
 	},
 /obj/item/weapon/gun/energy/retro,
+/obj/machinery/recharger/wallcharger{
+	dir = 1;
+	icon_state = "wrecharger0";
+	pixel_y = -22
+	},
 /turf/simulated/floor/tiled,
-/area/rawl/crew)
+/area/rawl/fore)
 "cm" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/universal{
 	dir = 4
 	},
 /obj/structure/disposalpipe/segment,
+/obj/effect/paint/red,
 /turf/simulated/wall/titanium,
 /area/rawl/crew)
 "cn" = (
@@ -982,6 +1083,7 @@
 	dir = 8;
 	icon_state = "pipe-c"
 	},
+/obj/effect/paint/red,
 /turf/simulated/wall/titanium,
 /area/rawl/crew)
 "co" = (
@@ -990,6 +1092,8 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/item/weapon/soap,
+/obj/effect/floor_decal/corner/white/diagonal,
 /turf/simulated/floor/tiled,
 /area/rawl/crew)
 "cp" = (
@@ -1000,9 +1104,8 @@
 	temperature = 313.15
 	},
 /turf/simulated/floor/plating,
-/area/rawl/crew)
+/area/rawl/pipeworks)
 "cq" = (
-/obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/simple/hidden/universal{
 	dir = 4
 	},
@@ -1010,170 +1113,173 @@
 	frame_path = /obj/structure/wall_frame/titanium;
 	id = "rawl_windows"
 	},
+/obj/machinery/door/firedoor/autoset,
 /turf/simulated/floor/plating,
-/area/rawl/crew)
+/area/rawl/fore)
 "cr" = (
 /obj/structure/inflatable/door,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1;
+	icon_state = "warning"
+	},
 /turf/simulated/floor/airless,
 /area/rawl/crew)
 "cs" = (
-/obj/machinery/light/small{
-	dir = 8
-	},
+/obj/effect/submap_landmark/spawnpoint/rawl_tech,
 /turf/simulated/floor/tiled,
-/area/rawl/crew)
+/area/rawl/cargo)
 "ct" = (
 /obj/structure/stasis_cage,
 /obj/structure/window/reinforced{
 	dir = 1
 	},
+/obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/airless,
 /area/rawl/crew)
 "cu" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 5
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 5
-	},
 /turf/simulated/floor/tiled,
-/area/rawl/crew)
+/area/rawl/cargo)
 "cv" = (
 /obj/structure/handrail,
+/obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/airless,
-/area/rawl/crew)
+/area/rawl/fore)
 "cw" = (
+/obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/airless,
-/area/rawl/crew)
+/area/rawl/fore)
 "cx" = (
 /obj/machinery/atmospherics/pipe/manifold/visible{
 	dir = 1
 	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+/obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
 /turf/simulated/floor/plating,
-/area/rawl/crew)
+/area/rawl/pipeworks)
 "cy" = (
 /obj/machinery/atmospherics/binary/pump{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/supply,
 /obj/machinery/atmospherics/pipe/simple/visible/scrubbers,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/plating,
-/area/rawl/crew)
+/area/rawl/pipeworks)
 "cz" = (
 /obj/machinery/atmospherics/pipe/simple/visible/supply,
 /obj/machinery/atmospherics/pipe/simple/visible/scrubbers,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/plating,
-/area/rawl/crew)
+/area/rawl/pipeworks)
 "cA" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/turf/simulated/floor/tiled,
-/area/rawl/crew)
-"cB" = (
-/obj/structure/inflatable/door,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 9
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 10
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled,
-/area/rawl/crew)
+/area/rawl/cargo)
 "cC" = (
 /obj/machinery/cryopod{
 	dir = 1;
 	icon_state = "body_scanner_0"
 	},
-/turf/simulated/floor/tiled,
-/area/rawl/crew)
-"cD" = (
-/obj/machinery/fabricator/hacked,
-/obj/item/stack/material/steel/ten{
-	amount = 25
+/obj/machinery/light/small{
+	dir = 8
 	},
-/obj/item/stack/material/glass/ten,
-/obj/item/stack/material/aluminium/ten,
-/obj/item/stack/material/plastic/ten,
+/obj/machinery/computer/cryopod{
+	pixel_x = -32
+	},
 /turf/simulated/floor/tiled,
-/area/rawl/crew)
-"cE" = (
-/obj/item/weapon/storage/belt/utility/full,
-/obj/item/weapon/storage/backpack/dufflebag/eng,
-/obj/item/device/scanner/gas,
-/obj/item/weapon/tape_roll,
-/obj/item/weapon/tape_roll,
-/obj/item/weapon/pickaxe,
-/obj/item/weapon/weldpack,
-/obj/item/weapon/storage/toolbox/mechanical,
-/obj/item/weapon/storage/toolbox/syndicate,
-/obj/item/weapon/storage/toolbox/electrical,
-/obj/structure/closet,
-/turf/simulated/floor/tiled,
-/area/rawl/crew)
-"cF" = (
-/obj/item/weapon/storage/briefcase/inflatable,
-/obj/item/weapon/storage/briefcase/inflatable,
-/obj/structure/table/rack,
-/obj/item/weapon/tank/jetpack/carbondioxide,
-/obj/item/weapon/tank/jetpack/carbondioxide,
-/obj/item/weapon/tank/jetpack/carbondioxide,
-/obj/item/weapon/tank/emergency/oxygen/double,
-/obj/item/weapon/tank/emergency/oxygen/double,
-/obj/item/weapon/tank/emergency/oxygen/double,
-/obj/machinery/light,
-/turf/simulated/floor/tiled,
-/area/rawl/crew)
-"cG" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+/area/rawl/cargo)
+"cD" = (
+/obj/item/weapon/gun/projectile/shotgun/doublebarrel{
+	starts_loaded = 0
+	},
+/obj/item/ammo_magazine/shotholder/net,
+/obj/item/ammo_magazine/shotholder/net,
+/obj/structure/table/rack{
 	dir = 4
 	},
-/obj/structure/table/rack,
-/obj/item/clothing/suit/space/void/atmos/prepared,
-/obj/item/clothing/suit/space/void/atmos/prepared,
+/obj/item/weapon/material/harpoon,
+/obj/item/weapon/material/harpoon,
+/obj/item/weapon/material/harpoon,
+/obj/item/device/dociler,
+/obj/item/device/dociler,
+/obj/item/device/dociler,
 /turf/simulated/floor/tiled,
-/area/rawl/crew)
-"cH" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 4;
-	external_pressure_bound = 140;
-	external_pressure_bound_default = 140;
-	icon_state = "map_vent_out";
-	pressure_checks = 1;
-	pressure_checks_default = 1;
-	use_power = 1
+/area/rawl/cargo)
+"cE" = (
+/obj/machinery/power/apc/high/rawl{
+	pixel_y = -28
 	},
+/obj/structure/cable,
+/turf/simulated/floor/tiled,
+/area/rawl/cargo)
+"cG" = (
+/obj/structure/table/rack,
+/obj/item/clothing/suit/space/void/dohruk/prepared,
+/obj/item/clothing/suit/space/void/dohruk/prepared,
+/obj/machinery/power/apc/high/rawl{
+	dir = 1;
+	pixel_y = 24
+	},
+/obj/structure/cable{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/tiled,
+/area/rawl/fore)
+"cH" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 8
 	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
 /turf/simulated/floor/tiled,
-/area/rawl/crew)
+/area/rawl/fore)
 "cI" = (
 /obj/structure/table/standard,
 /obj/item/weapon/storage/firstaid/surgery,
-/turf/simulated/floor/tiled,
+/obj/machinery/power/apc/high/rawl{
+	pixel_y = -28
+	},
+/obj/structure/cable,
+/turf/simulated/floor/tiled/white,
 /area/rawl/crew)
 "cJ" = (
-/obj/machinery/light/small,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
 	},
-/obj/structure/table/standard,
+/obj/structure/bed,
+/obj/item/clothing/ears/earmuffs,
+/obj/item/weapon/bedsheet/brown,
+/obj/item/clothing/glasses/blindfold,
 /turf/simulated/floor/tiled,
 /area/rawl/crew)
 "cK" = (
-/obj/machinery/light{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/closet/secure_closet/personal/rawl{
+	pixel_x = 32
+	},
 /turf/simulated/floor/tiled,
-/area/rawl/crew)
+/area/rawl/fore)
 "cL" = (
 /obj/machinery/airlock_sensor{
 	frequency = 1331;
@@ -1188,7 +1294,7 @@
 	icon_state = "handrail"
 	},
 /turf/simulated/floor/plating,
-/area/rawl/crew)
+/area/rawl/fore)
 "cM" = (
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
 	cycle_to_external_air = 1;
@@ -1196,7 +1302,7 @@
 	frequency = 1331;
 	id_tag = "rawl_main";
 	pixel_x = 19;
-	req_access = null;
+	req_access = list("ACCESS_RAWL");
 	tag_exterior_sensor = "rawl_main_exterior"
 	},
 /obj/machinery/airlock_sensor{
@@ -1213,33 +1319,263 @@
 	icon_state = "handrail"
 	},
 /turf/simulated/floor/plating,
-/area/rawl/crew)
+/area/rawl/fore)
 "cN" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
 	},
-/turf/simulated/floor/tiled,
-/area/rawl/crew)
-"cO" = (
-/obj/structure/window/reinforced{
-	dir = 8
+/obj/machinery/light{
+	dir = 4
 	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 1
+/obj/machinery/access_button/airlock_interior{
+	frequency = 1331;
+	master_tag = "rawl_main";
+	pixel_x = 32;
+	pixel_y = 0
 	},
 /turf/simulated/floor/tiled,
-/area/rawl/crew)
+/area/rawl/fore)
 "cP" = (
 /obj/structure/handrail{
 	dir = 8;
 	icon_state = "handrail"
 	},
+/obj/machinery/access_button/airlock_exterior{
+	frequency = 1331;
+	master_tag = "rawl_main";
+	pixel_x = 32;
+	pixel_y = 0
+	},
+/obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/airless,
-/area/rawl/crew)
+/area/rawl/fore)
 "cQ" = (
 /obj/structure/closet/secure_closet/freezer/rawl,
 /turf/simulated/floor/tiled,
 /area/rawl/crew)
+"cT" = (
+/obj/machinery/fabricator/hacked,
+/obj/item/stack/material/steel/ten{
+	amount = 25
+	},
+/obj/item/stack/material/glass/ten,
+/obj/item/stack/material/aluminium/ten,
+/obj/item/stack/material/plastic/ten,
+/turf/simulated/floor/tiled,
+/area/rawl/cargo)
+"fp" = (
+/obj/effect/shuttle_landmark/rawl/two,
+/turf/space,
+/area/space)
+"gV" = (
+/obj/item/device/binoculars,
+/obj/item/device/binoculars,
+/obj/structure/table/rack,
+/obj/item/device/binoculars,
+/obj/item/device/gps,
+/obj/item/device/gps,
+/obj/item/device/gps,
+/obj/item/device/flashlight/lantern,
+/obj/item/device/flashlight/lantern,
+/obj/item/device/flashlight/lantern,
+/turf/simulated/floor/tiled,
+/area/rawl/cargo)
+"if" = (
+/obj/effect/paint/brown,
+/turf/simulated/wall/titanium,
+/area/rawl/fore)
+"iD" = (
+/obj/effect/paint/brown,
+/turf/simulated/wall/titanium,
+/area/rawl/cargo)
+"jn" = (
+/obj/effect/paint/red,
+/turf/simulated/wall/titanium,
+/area/rawl/fore)
+"lW" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/door/window/southleft,
+/turf/simulated/floor/tiled,
+/area/rawl/cargo)
+"nm" = (
+/obj/machinery/atmospherics/unary/engine{
+	dir = 8;
+	icon_state = "nozzle"
+	},
+/turf/simulated/floor/airless,
+/area/rawl/cargo)
+"oP" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled,
+/area/rawl/crew)
+"pm" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled,
+/area/rawl/crew)
+"qb" = (
+/obj/structure/closet/secure_closet/freezer/rawl,
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/white/border{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/rawl/crew)
+"sL" = (
+/turf/simulated/mineral/random/high_chance,
+/area/space)
+"va" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/rawl/fore)
+"vO" = (
+/obj/machinery/light/small{
+	dir = 4;
+	icon_state = "bulb1"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/turf/simulated/floor/tiled,
+/area/rawl/cargo)
+"wm" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/paint/brown,
+/turf/simulated/wall/titanium,
+/area/rawl/crew)
+"xz" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 4
+	},
+/obj/structure/handrail,
+/turf/simulated/floor/tiled,
+/area/rawl/cargo)
+"xW" = (
+/obj/item/weapon/storage/belt/utility/full,
+/obj/item/weapon/storage/backpack/dufflebag/eng,
+/obj/item/device/scanner/gas,
+/obj/item/weapon/tape_roll,
+/obj/item/weapon/tape_roll,
+/obj/item/weapon/pickaxe,
+/obj/item/weapon/weldpack,
+/obj/item/weapon/storage/toolbox/mechanical,
+/obj/item/weapon/storage/toolbox/syndicate,
+/obj/item/weapon/storage/toolbox/electrical,
+/obj/structure/closet,
+/turf/simulated/floor/tiled,
+/area/rawl/cargo)
+"zL" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/corner/white/border{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/rawl/crew)
+"Db" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/structure/closet/secure_closet/personal/rawl{
+	pixel_x = 32
+	},
+/turf/simulated/floor/tiled,
+/area/rawl/fore)
+"Dx" = (
+/obj/effect/paint/red,
+/turf/simulated/wall/titanium,
+/area/rawl/cargo)
+"DS" = (
+/obj/effect/submap_landmark/spawnpoint/rawl_butcher,
+/turf/simulated/floor/tiled,
+/area/rawl/cargo)
+"EK" = (
+/obj/effect/shuttle_landmark/rawl/one,
+/turf/space,
+/area/space)
+"Ic" = (
+/turf/simulated/mineral/random,
+/area/space)
+"Jq" = (
+/obj/effect/submap_landmark/joinable_submap/rawl,
+/turf/space,
+/area/space)
+"Ll" = (
+/obj/structure/bed,
+/obj/item/clothing/ears/earmuffs,
+/obj/item/weapon/bedsheet/brown,
+/obj/item/clothing/glasses/blindfold,
+/turf/simulated/floor/tiled,
+/area/rawl/crew)
+"MR" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/rawl/cargo)
+"NF" = (
+/obj/effect/paint/red,
+/turf/simulated/wall/titanium,
+/area/rawl/pipeworks)
+"PB" = (
+/obj/structure/window/reinforced,
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/rawl/cargo)
+"Sa" = (
+/turf/simulated/floor/tiled,
+/area/rawl/fore)
+"SH" = (
+/obj/effect/submap_landmark/spawnpoint/rawl_medic,
+/turf/simulated/floor/tiled,
+/area/rawl/cargo)
+"TU" = (
+/obj/effect/paint/brown,
+/turf/simulated/wall/titanium,
+/area/rawl/crew)
+"Ua" = (
+/obj/effect/paint/brown,
+/turf/simulated/wall/titanium,
+/area/rawl/pipeworks)
+"Vc" = (
+/obj/effect/wallframe_spawn/reinforced/titanium,
+/obj/machinery/door/firedoor,
+/turf/simulated/floor/plating,
+/area/rawl/cargo)
 
 (1,1,1) = {"
 aa
@@ -17246,7 +17582,7 @@ aa
 aa
 aa
 aa
-ab
+aa
 aa
 aa
 aa
@@ -17765,7 +18101,7 @@ aa
 aa
 aa
 aa
-aa
+Ic
 aa
 aa
 aa
@@ -17965,9 +18301,9 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
+Ic
+aE
+aE
 aa
 aa
 aa
@@ -18164,13 +18500,13 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+Ic
+aE
+aE
+aE
+aE
+aE
+aE
 aa
 aa
 aa
@@ -18367,12 +18703,12 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
+aE
+aE
+aE
+Ic
+aE
+aE
 aa
 aa
 aa
@@ -18556,6 +18892,10 @@ aa
 aa
 aa
 aa
+sL
+sL
+sL
+sL
 aa
 aa
 aa
@@ -18565,16 +18905,12 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aE
+aE
+Ic
+Ic
+Ic
+Ic
 aa
 aa
 aa
@@ -18758,6 +19094,25 @@ aa
 aa
 aa
 aa
+sL
+sL
+sL
+sL
+sL
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aE
+Ic
+Ic
+Ic
+Ic
 aa
 aa
 aa
@@ -18772,25 +19127,6 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-al
 aa
 aa
 aa
@@ -18959,6 +19295,14 @@ aa
 aa
 aa
 aa
+sL
+sL
+sL
+sL
+sL
+sL
+sL
+sL
 aa
 aa
 aa
@@ -18966,20 +19310,12 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aE
+aE
+Ic
+Ic
+Ic
+Ic
 aa
 aa
 aa
@@ -19161,28 +19497,28 @@ aa
 aa
 aa
 aa
+sL
+sL
+sL
+sL
+sL
+sL
+sL
+sL
+sL
+sL
 aa
 aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aE
+aE
+aE
+Ic
+Ic
+Ic
+Ic
 aa
 aa
 aa
@@ -19364,28 +19700,28 @@ aa
 aa
 aa
 aa
+sL
+sL
+sL
+sL
+sL
+sL
+sL
+sL
 aa
 aa
 aa
+sL
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aE
+aE
+aE
+Ic
+Ic
+Ic
+Ic
+Ic
 aa
 aa
 aa
@@ -19543,52 +19879,52 @@ aa
 aa
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+sL
+sL
+sL
+sL
+sL
+sL
+sL
+aa
+aa
+aa
+aa
+aa
+aa
 aE
 aE
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aE
+Ic
+Ic
+Ic
+Ic
+Ic
+Ic
 aa
 aa
 aa
@@ -19744,54 +20080,54 @@ aa
 aa
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+sL
+sL
+sL
+sL
+sL
+sL
+aa
+aa
+aa
+aa
+aa
+aa
 aE
 aE
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
 aE
-aE
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+Ic
+Ic
+Ic
+Ic
+Ic
+Ic
+Ic
 aa
 aa
 aa
@@ -19957,43 +20293,43 @@ aa
 aa
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+sL
+sL
+sL
+sL
+sL
+sL
+aa
+aa
+aa
+sL
+aa
 aE
 aE
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aE
+aE
+Ic
+Ic
+Ic
+Ic
+Ic
+Ic
+Ic
 aa
 aa
 aa
@@ -20160,42 +20496,42 @@ aa
 aa
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+sL
+aa
+sL
+sL
+sL
+sL
+aa
+aa
+aa
+aa
+aa
+aa
 aE
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aE
+aE
+aE
+Ic
+Ic
+Ic
+Ic
+Ic
+Ic
+Ic
 aa
 aa
 aa
@@ -20353,7 +20689,7 @@ aa
 aa
 aa
 ai
-aa
+Jq
 ad
 aa
 aa
@@ -20362,42 +20698,42 @@ aa
 aa
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+sL
+sL
+sL
+aa
+aa
+aa
+sL
+aa
+aa
+aa
 aE
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aE
+Ic
+Ic
+Ic
+Ic
+Ic
+Ic
+Ic
+Ic
+Ic
 aa
 aa
 aa
@@ -20579,6 +20915,8 @@ aa
 aa
 aa
 aa
+sL
+sL
 aa
 aa
 aa
@@ -20587,19 +20925,17 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aE
+Ic
+Ic
+Ic
+Ic
+Ic
+Ic
+Ic
+Ic
+Ic
+Ic
 aa
 aa
 aa
@@ -20763,8 +21099,8 @@ bs
 bp
 bp
 bp
-af
-af
+jn
+jn
 aa
 aa
 aa
@@ -20790,18 +21126,18 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aE
+aE
+Ic
+Ic
+Ic
+Ic
+Ic
+Ic
+Ic
+Ic
+Ic
+Ic
 aa
 aa
 aa
@@ -20965,7 +21301,7 @@ bs
 cq
 bA
 ac
-af
+jn
 cv
 aa
 aa
@@ -20992,18 +21328,18 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aE
+Ic
+Ic
+Ic
+Ic
+Ic
+Ic
+Ic
+Ic
+Ic
+Ic
+Ic
 aa
 aa
 aa
@@ -21193,19 +21529,19 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aE
+aE
+Ic
+Ic
+Ic
+Ic
+Ic
+Ic
+Ic
+Ic
+Ic
+Ic
+Ic
 aa
 aa
 aa
@@ -21360,12 +21696,12 @@ ct
 bO
 aq
 bn
-bb
+af
 bQ
-ap
-ap
-ap
-ap
+Sa
+va
+Sa
+Sa
 br
 bw
 cL
@@ -21394,20 +21730,20 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aE
+aE
+Ic
+Ic
+Ic
+Ic
+Ic
+Ic
+Ic
+Ic
+Ic
+Ic
+Ic
+Ic
 aa
 aa
 aa
@@ -21564,10 +21900,10 @@ aP
 af
 af
 cG
-ap
+Sa
 ci
-ap
-ap
+Sa
+Sa
 bt
 bv
 bx
@@ -21595,21 +21931,21 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aE
+aE
+Ic
+Ic
+Ic
+Ic
+Ic
+Ic
+Ic
+Ic
+Ic
+Ic
+Ic
+aE
+aE
 aa
 aa
 aa
@@ -21765,7 +22101,7 @@ ae
 cb
 aS
 bY
-cb
+Db
 aL
 cH
 cK
@@ -21792,6 +22128,27 @@ aa
 aa
 aa
 aa
+Ic
+aa
+Ic
+aa
+aa
+aE
+Ic
+Ic
+Ic
+Ic
+Ic
+Ic
+Ic
+Ic
+Ic
+Ic
+Ic
+Ic
+aE
+aE
+aE
 aa
 aa
 aa
@@ -21807,28 +22164,7 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+EK
 aa
 aa
 aa
@@ -21962,21 +22298,21 @@ aa
 aa
 aa
 aa
-af
-bO
+TU
+wm
 aW
 aU
-af
-af
-af
+TU
+if
+if
 ba
 bF
 bq
 by
-af
-af
-bJ
-af
+if
+if
+if
+if
 aa
 aa
 aa
@@ -21995,26 +22331,26 @@ aa
 aa
 aa
 aa
+Ic
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+Ic
+Ic
+Ic
+Ic
+Ic
+Ic
+Ic
+Ic
+Ic
+Ic
+aE
+aE
+aE
+aE
+aE
+Ic
 aa
 aa
 aa
@@ -22164,21 +22500,21 @@ aa
 aa
 aa
 aa
-af
+TU
 ak
 ap
 aC
-af
+TU
 aA
 aN
 be
 aQ
 bH
-af
+iD
 aV
 cs
 cC
-af
+iD
 aa
 aa
 aa
@@ -22214,9 +22550,9 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
+Ic
+Ic
+Ic
 aa
 aa
 aa
@@ -22366,21 +22702,21 @@ aa
 aa
 aa
 aa
-af
+TU
 ao
-ap
+oP
 bP
-af
+TU
 am
 aR
 bl
 bj
 cp
-bM
-ap
-ap
-cC
-af
+iD
+gV
+SH
+cT
+iD
 aa
 aa
 aa
@@ -22417,8 +22753,8 @@ aa
 aa
 aa
 aa
-aa
-aa
+Ic
+Ic
 aa
 aa
 aa
@@ -22568,9 +22904,9 @@ aa
 aa
 aa
 aa
-af
+TU
 aZ
-ap
+pm
 cJ
 bU
 ax
@@ -22578,11 +22914,11 @@ bS
 bL
 cx
 bi
-af
+iD
 bm
-ap
-cC
-af
+DS
+xW
+iD
 aa
 aa
 aa
@@ -22621,7 +22957,7 @@ aa
 aa
 aa
 aa
-aa
+Ic
 aa
 aa
 aa
@@ -22770,11 +23106,11 @@ aa
 aa
 aa
 aa
-af
+TU
 bT
-ap
-bT
-af
+pm
+Ll
+TU
 aF
 aG
 cg
@@ -22784,7 +23120,7 @@ aj
 bN
 cu
 cD
-af
+iD
 aa
 aa
 aa
@@ -22972,21 +23308,21 @@ aa
 aa
 aa
 aa
-af
+TU
 cQ
-ap
-bo
-af
+pm
+Ll
+TU
 aB
 as
 aO
 aT
 bh
-af
+iD
 bR
 cA
 cE
-af
+iD
 aa
 aa
 aa
@@ -23174,21 +23510,21 @@ aa
 aa
 aa
 aa
-af
-cQ
-ap
+TU
+qb
+zL
 bV
-af
+TU
 av
 az
 bf
 aJ
 bg
-af
+iD
 ca
-cA
-cF
-af
+MR
+cu
+iD
 aa
 aa
 aa
@@ -23376,21 +23712,21 @@ aa
 aa
 aa
 aa
-af
+TU
 aK
 aX
 cI
-af
+TU
 aw
 at
 bc
-af
-aw
-af
+Ua
+xz
+PB
 ck
-cB
-cO
-af
+cu
+cu
+iD
 aa
 aa
 aa
@@ -23578,21 +23914,21 @@ aa
 aa
 aa
 aa
-af
+TU
 aM
 aY
 bX
 cf
 au
-af
+Ua
 aH
-af
+Ua
 ce
-af
-ap
-ap
-ap
-af
+lW
+vO
+cu
+cu
+iD
 aa
 aa
 aa
@@ -23780,21 +24116,21 @@ aa
 aa
 aa
 aa
-af
-af
+TU
+TU
 bW
 af
 af
 an
 ay
 aI
-af
-an
-af
-af
-bW
-af
-af
+NF
+nm
+Dx
+Dx
+Vc
+iD
+iD
 aa
 aa
 aa
@@ -28280,7 +28616,7 @@ aa
 aa
 aa
 aa
-aa
+fp
 aa
 aa
 aa
